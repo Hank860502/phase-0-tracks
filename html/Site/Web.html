@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order sheet</title>
+</head>
+<body>
+<h1><p><a href="Home.html">Hecho Coffee</a></p></h1>
+<h2><p>Menu</p></h2>
+<table border=1>
+  <tr>
+    <th>Coffee</th>
+    <th>Priice</th>
+  </tr>
+  <tr>
+    <td>Late</td>
+    <td>9$</td>
+  </tr>
+  <tr>
+    <td>Cappucino</td>
+    <td>10$</td>
+  </tr>
+  <tr>
+  	<td>Caremel macchiato</td>
+    <td>10$</td>
+  </tr>
+  <tr>
+  	<td>Strawberry Cheese Cake</td>
+  	<td>5$</td>
+  </tr>
+</table><br>
+<form action="accounter.html" method="post">
+  <div>
+    <label>Order:</label>
+    <select name="select">
+  <option value="Late">Late</option> 
+  <option value="Cappucino">Cappucino</option>
+  <option value="Caremel Macchiato">Caremel</option>
+  <option value="Strawberry Cheese Cake">Strawberry Cheese Cake</option> 
+</select>
+  </div><br>
+  <div>
+    <label>Table:</label>
+    <input type="Number" name="Table">
+  </div><br>
+  <div>
+    <label>Note:</label>
+    <input type="Note" name="Note">
+  </div>
+  <p>Sorry, but you can only order one at a time.</p>
+  <button type="submit">Order</button>
+</form>
+</body>
+</html>
