@@ -10,3 +10,8 @@ margin: 10px;
 section.list{
 font-size: .8em;
 }
+/*The cascading is to pick the right value from multiple origin
+/*The rule used is chosen by cascading down from the more general rules to the specific rule required. The most specific rule is chosen
+/*http://www.w3schools.com  In CSS, selectors are patterns used to select the element(s) you want to style.
+/*pseudoselector:     a:link{}
+/*ul>li
