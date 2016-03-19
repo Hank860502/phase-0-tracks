@@ -10,15 +10,27 @@ cite {
 }
 
 #external-links ul {
+  vertical-align: top;
   list-style-type: none;
   padding-left: 0px;
+}
+#external-links {
+width: 20%;
+vertical-align: top;
+display: inline-block;
+}
+main {
+width: 79%;
+display: inline-block;
 }
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
 img {
-  width: 100%;
+width: 100%;
+display: block;
+vertical-align: top;
 }
 
 figure {
@@ -30,3 +42,23 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+body{
+margin: auto;
+max-width: 960px;
+display: block;
+vertical-align: top;
+min-width: 600px;
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section {
+    font-size: 50%;
+  }
+}
+
