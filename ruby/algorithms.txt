@@ -1,2 +1,7 @@
 if: robot hear my name, Hank, walk out the elevator.
 else: press all the floor button in the elevator and stay inside the elevator.
+
+Example:
+For automatic bus picking and dropping off passengers on a straight road:
+Until the bus meet a red light or passengers pressing the button(To get off or jump in the bus), keep driving straight. 
+If the bus reach the end of the road, turn back and keep driving again.
