@@ -1,0 +1,2 @@
+if: robot hear my name, Hank, walk out the elevator.
+else: press all the floor button in the elevator and stay inside the elevator.
