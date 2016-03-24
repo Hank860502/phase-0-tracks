@@ -15,7 +15,15 @@ while people > 0
 	
 	puts 'Would you like to enroll in the company’s health insurance(y/n)?'
 	c = gets.chomp.to_s
-	
+
+	loop do 
+		puts 'Name any allergies.(Type done when finish)'
+		allergy = gets.chomp.to_s
+		if allergy == 'sunshine'
+		puts 'Probably a vampire.'
+		end
+		break if allergy == 'sunshine' or allergy == 'done'  #condition success but the result will appear twice. For example: Probably a vampire, Results inconclusive.
+	end
 	if name == "Drake Cula"	#warning appear when combine two name condition together
 		puts 'Definitely a vampire'
 	elsif name == "Tu Fang"	#warning appear when combine two name condition together
@@ -26,7 +34,7 @@ while people > 0
 		puts 'Probably not a vampire.'
 	else 
 		puts 'Results inconclusive.'
-	
 	end
 	people -= 1
 end
+puts  "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
