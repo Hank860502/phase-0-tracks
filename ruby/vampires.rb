@@ -5,7 +5,7 @@ while people > 0
 	name = gets.chomp.to_s
 	
 	puts 'How old are you?'
-	age = gets.chomp.to_i #not done yet!
+	age = gets.chomp.to_i 
 
 	puts 'Which year are you born?'
 	year = gets.chomp.to_i
@@ -20,20 +20,18 @@ while people > 0
 		puts 'Name any allergies.(Type done when finish)'
 		allergy = gets.chomp.to_s
 		if allergy == 'sunshine'
-			puts 'Probably a vampire.'
+		puts "Probably a vampire"
 		break
 		elsif allergy == 'done'
 		break
 		end
 		  #condition success but the result will appear twice. For example: Probably a vampire, Results inconclusive.
 	end
-	if name == "Drake Cula"	#warning appear when combine two name condition together
+	if name == "Drake Cula"	|| name == "Tu Fang" 
 		puts 'Definitely a vampire'
-	elsif name == "Tu Fang"	#warning appear when combine two name condition together
-		puts 'Definitely a vampire'
-	elsif age + year != 2016 && (bread == "n" || c == "n") 	#age not done yet
+	elsif age + year != 2016 && (bread == "n" || c == "n")
 		puts 'Probably a vampire.'
-	elsif age + year == 2016 && (bread == "y" || c == "y")  #age not done yet
+	elsif age + year == 2016 && (bread == "y" || c == "y")
 		puts 'Probably not a vampire.'
 	else 
 		puts 'Results inconclusive.'
