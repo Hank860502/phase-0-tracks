@@ -14,7 +14,7 @@ while people > 0
 	bread = gets.chomp.to_s
 	
 	puts 'Would you like to enroll in the company’s health insurance(y/n)?'
-	c = gets.chomp.to_s
+	insurance = gets.chomp.to_s
 
 	loop do 
 		puts 'Name any allergies.(Type done when finish)'
@@ -29,9 +29,9 @@ while people > 0
 	end
 	if name == "Drake Cula"	|| name == "Tu Fang" 
 		puts 'Definitely a vampire'
-	elsif age + year != 2016 && (bread == "n" || c == "n")
+	elsif age + year != 2016 && (bread == "n" || insurance == "n")
 		puts 'Probably a vampire.'
-	elsif age + year == 2016 && (bread == "y" || c == "y")
+	elsif age + year == 2016 && (bread == "y" || insurance == "y")
 		puts 'Probably not a vampire.'
 	else 
 		puts 'Results inconclusive.'
