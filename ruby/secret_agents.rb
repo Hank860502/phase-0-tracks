@@ -40,7 +40,6 @@ def decrypt(var)   #var=random string.
    end                                            #full[full.index(var[count])-1]  minus 1 index to the index that is found in previous step.
    puts store
 end
-
 #print decrypt('uifevdlgmjftbunjeojhiu')
 
 #To use this function make all letters lower case and do not include any special characters
