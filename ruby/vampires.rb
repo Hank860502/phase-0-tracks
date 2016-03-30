@@ -20,7 +20,7 @@ while people > 0
 		puts 'Name any allergies.(Type done when finish)'
 		allergy = gets.chomp.to_s
 		if allergy == 'sunshine'
-		puts "Probably a vampire"
+			puts "Probably a vampire"
 		break
 		elsif allergy == 'done'
 		break
