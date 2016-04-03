@@ -1,11 +1,12 @@
-#dinos = ["T-rex", "brontosaurus", "pterodactyl"
-#number_of_dinos = dinos.length
-#number_of_dinos.times { |i| puts dinos[i] }
+def test_method 
+  puts "Hello, nice to meet you!"
+  yield("Doug", "Hank")
+end
 
-#10.times { |x| puts "we're learning #{x} times!"}
+test_method {|name1, name2| puts "#{name1} and #{name2}"}
 
-hobbies= ['tennis', 'movies', 'coding', 'cars', '6']
-cars = { color: "blue", brand: "subaru", quality: "great", seat: "3"}
+hobbies= ['tennis', 'movies', 'coding', 'cars', "balls9", "balls16"]  #9balls.to_i = 9 but after reverse, sllab9=0. 
+cars = { color: "blue", brand: "subaru", seat: "6", people: "3"}
 
 hobbies.each do |x|
   puts "I like #{x}"
@@ -21,21 +22,32 @@ hobbies.map! do |hobby|
 end
 p hobbies
 
-hobbies.delete_if{|hobby| hobby.to_i > 5}
+hobbies.delete_if{|hobby| hobby.to_i > 10}
 
 p hobbies
 
-#cars.delete_if{|car| car.to_i > 5}
+cars.delete_if{|car_specs_key, car_specs_value| car_specs_value.to_i > 5}
 
-#def condition(hash)
-  #if cars[:seat] > 5
-    #cars.select
-  #end
-#end
+p cars
+
+#hobbies.delete_if{|hobby| (hobby.to_i > 5) == false}
+
+#p hobbies
+
+#cars.delete_if{|car_specs_key, car_specs_value|  (car_specs_value.to_i > 5) == false}
+
 #p cars
-#na = { }
-#na[:na] = na
-#na[:bat] = :man
-#print na[:na][:na][:na][:na][:na][:na][:na][:bat] #hashes can reference and store themselves
-# Hello peter
-# What are you doing?
+
+
+hobbies.keep_if{|hobby| hobby.to_i > 0}
+
+p hobbies
+
+cars.keep_if{|car_specs_key, car_specs_value|  car_specs_value.to_i > 0}  #exclude string.to_i = 0
+
+p cars
+
+
+
+#A method that will remove items from a data structure until the condition in the block evaluates to false, then stops.
+
