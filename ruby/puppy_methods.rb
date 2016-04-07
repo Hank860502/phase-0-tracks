@@ -1,3 +1,6 @@
+
+
+
 class Puppy
 
   def fetch(toy)
@@ -34,7 +37,9 @@ puppies.roll_over
 puppies.dog_years(3)
 puppies.nickname("Hank")
 
-
+#create class Pair
+#initialize it
+#creat two method with arguments
 
 
 class Pair
