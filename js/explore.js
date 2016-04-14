@@ -4,7 +4,14 @@
 // loop until i = 0
 //count i from the last to the first index
 // print from the last to the first index
-var str = "hello"
-for (var i = str.length; i >= 0; i -=1){
-	console.log(str[i])
+// function reverse(str){
+// 	for (var i = str.length; i >= 0; i -=1){
+// 	console.log(str[i]) ; 
+// }}
+// return reverse("hello")
+
+function hello(str){
+	console.log((str[4]) + (str[3]) + (str[2]) + (str[1])+ (str[0])); 
 }
+var store = hello("hello")
+console.log(store !=1)
