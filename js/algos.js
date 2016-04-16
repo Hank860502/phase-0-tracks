@@ -7,3 +7,12 @@
 // grasp the longest word
 // create a object holding word as key and length of word as value
 // after find the biggest length, call the value's key
+
+var dictionary = ["eating", "shopping", "running"]
+function longest(array){
+	var store_length = ''
+	for (var i = 0; i < array.length; i ++)
+	store_length += array[i].length
+	return (store_length)
+}
+console.log(longest(dictionary))
