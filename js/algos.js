@@ -5,11 +5,11 @@
 // creat a array name dictionary contains three words.
 // iterate through in the function to count the length of each word.  dictionary[i].store_length
 // grasp the longest word}
-function longest(array){
-	var store_longest =array[0]
-	for (var i=1; i<array.length; i++){
-		if (array[i].length > store_longest.length) {
-			store_longest = array[i]
+function longest(arr){
+	var store_longest =arr[0]
+	for (var i=1; i<arr.length; i++){
+		if (arr[i].length > store_longest.length) {
+			store_longest = arr[i]
 		}
 	}
 	return (store_longest)
@@ -37,23 +37,30 @@ function stringMachine(number){
 	var array = [];
     while (number >0){
     var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    for( var i=0; i < 10; i++ )
+    var possible = "abcdefghijklmnopqrstuvwxyz";
+    wordLength = Math.floor(10 * Math.random() + 1);  //random length of words
+    for( var i=0; i < wordLength; i++ )
         text += possible.charAt(Math.floor(Math.random() * possible.length));
     array.push(text);
     number -=1
 }
- console.log(array)
+ return array;
 }
 
 
-
+//driver code for longest
 var dictionary = ["eating", "shopping", "running"]
 console.log(longest(dictionary))
+//driver code for searching
 var user1 = {name: 'Hank', age: 18}
 var user2 = {name: 'Han', age: 18}
 console.log(searching(user1, user2))
-stringMachine(5)
-
-
+//driver code for feeding array and stringMachine
+    arrayOfStrings = [];
+for(var i = 0; i < 10; i++) {
+  var arrayLength = 10  //10 array to feed to longest
+  arrayOfStrings = stringMachine(arrayLength);
+  console.log(arrayOfStrings);
+  console.log(longest(arrayOfStrings));
+}
 
