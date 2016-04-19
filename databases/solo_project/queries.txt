@@ -1,0 +1,23 @@
+sqlite> SELECT*FROM indoor_exercises
+   ...> ;
+Swimming|5000|false
+Basketball|5000|false
+Table tennis|500|false
+sqlite> UPDATE indoor_exercises SET population=10000 WHERE name="Basketball";
+sqlite> SELECT*FROM indoor_exercises, outdoor_exercises;
+Swimming|5000|false|Tennis|10000|true
+Swimming|5000|false|Soccer|50000|true
+Swimming|5000|false|Golf|5000|true
+Basketball|10000|false|Tennis|10000|true
+Basketball|10000|false|Soccer|50000|true
+Basketball|10000|false|Golf|5000|true
+Table tennis|500|false|Tennis|10000|true
+Table tennis|500|false|Soccer|50000|true
+Table tennis|500|false|Golf|5000|true
+sqlite> SELECT indoor_exercises.name, outdoor_exercises.name
+   ...> FROM indoor_exercises, outdoor_exercises
+   ...> WHERE indoor_exercises.population=outdoor_exercises.population;
+Swimming|Golf
+Basketball|Tennis
+DELETE FROM indoor_exercises
+   ...> WHERE indoor_exercises.name="Swimming";
