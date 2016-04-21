@@ -1,0 +1,38 @@
+sqlite> SELECT*FROM team;
+1|Dragon|true|1
+2|Pig|false|2
+3|Cow|true|1
+4|Duck|false|2
+
+sqlite> UPDATE team SET strong="true" WHERE name="Pig";
+sqlite> SELECT*FROM team;
+1|Dragon|true|1
+2|Pig|true|2
+3|Cow|true|1
+4|Duck|false|2
+
+sqlite> SELECT *FROM team, country WHERE team.country_id=country.id;
+1|Dragon|true|1|1|Taiwan
+2|Pig|true|2|2|Korea
+3|Cow|true|1|1|Taiwan
+4|Duck|false|2|2|Korea
+
+sqlite> SELECT team.name, country.name FROM team JOIN country ON team.country_id=country.id;
+Dragon|Taiwan
+Pig|Korea
+Cow|Taiwan
+Duck|Korea
+
+sqlite> DELETE FROM team WHERE name="Duck";
+sqlite> SELECT *FROM team;
+1|Dragon|true|1
+2|Pig|true|2
+3|Cow|true|1
+
+SELECT team.name FROM team LEFT JOIN country ON team.country_id=country.id;
+Dragon
+Pig
+Cow
+
+sqlite> SELECT team.name FROM team RIGHT JOIN country ON team.country_id=country.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
