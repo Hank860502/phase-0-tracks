@@ -13,3 +13,8 @@ $(document).ready(function() {
        $(this).toggle(1000);
    }); 
 });
+
+// $(document).ready(function(){
+//   $('div').hide()
+// });
+
